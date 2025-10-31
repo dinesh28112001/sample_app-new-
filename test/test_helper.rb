@@ -1,6 +1,12 @@
 ENV["RAILS_ENV"] ||= "test"
+require "rails-controller-testing"
+Rails::Controller::Testing.install
+
 require_relative "../config/environment"
 require "rails/test_help"
+require "minitest/reporters"
+Minitest::Reporters.use!   # 👈 Enables colorful test reports
+
 
 module ActiveSupport
   class TestCase
