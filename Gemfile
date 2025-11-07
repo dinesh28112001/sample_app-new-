@@ -8,7 +8,7 @@ gem "fiddle"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
-gem "bootstrap", "~> 5.3"
+gem "bootstrap", "~> 5.3.3"
 gem "sassc-rails", '>= 2.1.2'
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
@@ -74,3 +74,5 @@ group :test do
   gem 'guard', '2.15.0'
   gem 'guard-minitest', '2.4.6'
 end
+
+gem "webpacker", "~> 5.4"
