@@ -50,6 +50,11 @@ GEM
       erubi (~> 1.11)
       rails-dom-testing (~> 2.2)
       rails-html-sanitizer (~> 1.6)
+    active_storage_validations (1.2.0)
+      activejob (>= 5.2.0)
+      activemodel (>= 5.2.0)
+      activestorage (>= 5.2.0)
+      activesupport (>= 5.2.0)
     activejob (7.1.5.2)
       activesupport (= 7.1.5.2)
       globalid (>= 0.3.6)
@@ -137,6 +142,9 @@ GEM
       minitest (>= 3.0)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
+    image_processing (1.14.0)
+      mini_magick (>= 4.9.5, < 6)
+      ruby-vips (>= 2.0.17, < 3)
     importmap-rails (2.2.2)
       actionpack (>= 6.0.0)
       activesupport (>= 6.0.0)
@@ -166,10 +174,11 @@ GEM
     marcel (1.1.0)
     matrix (0.4.3)
     method_source (1.1.0)
+    mini_magick (4.13.2)
     mini_mime (1.1.5)
     mini_portile2 (2.8.9)
-    minitest (5.26.0)
-    minitest-reporters (1.3.8)
+    minitest (5.26.1)
+    minitest-reporters (1.7.1)
       ansi
       builder
       minitest (>= 5.0)
@@ -263,6 +272,9 @@ GEM
       io-console (~> 0.5)
     rexml (3.4.4)
     ruby-progressbar (1.13.0)
+    ruby-vips (2.2.5)
+      ffi (~> 1.12)
+      logger
     rubyzip (3.2.0)
     sassc (2.4.0)
       ffi (~> 1.9)
@@ -316,7 +328,7 @@ GEM
       base64
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
-    will_paginate (3.1.8)
+    will_paginate (3.3.1)
     xpath (3.2.0)
       nokogiri (~> 1.8)
     zeitwerk (2.7.3)
@@ -326,20 +338,23 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  active_storage_validations (~> 1.2.0)
   bcrypt (~> 3.1.7)
   bootsnap
   bootstrap (~> 5.3.3)
-  bootstrap-will_paginate (= 1.0.0)
+  bootstrap-will_paginate (~> 1.0.0)
   capybara
   debug
   faker (~> 3.2)
   fiddle
   guard (= 2.15.0)
   guard-minitest (= 2.4.6)
+  image_processing (~> 1.12)
   importmap-rails
   jbuilder
+  mini_magick (~> 4.12)
   minitest (~> 5.22)
-  minitest-reporters (= 1.3.8)
+  minitest-reporters (~> 1.5)
   puma (>= 5.0)
   rails (~> 7.1.5.2)
   rails-controller-testing
@@ -351,7 +366,7 @@ DEPENDENCIES
   turbo-rails
   tzinfo-data
   web-console
-  will_paginate (= 3.1.8)
+  will_paginate (~> 3.3)
 
 RUBY VERSION
    ruby 3.4.4p34
